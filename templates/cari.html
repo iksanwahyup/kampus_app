@@ -1,1 +1,18 @@
+<h1>Cari Mahasiswa</h1>
 
+<form method="POST">
+    <input type="text" name="nama"
+placeholder="masukan nama">
+    <button type="submit">cari</button>
+</form>
+
+<hr>
+
+{% if hasil %}
+    <p>{{ hasil.nama }} - {{ hasil.nilai }} - {{ hasil.cek_lulus() }}</p>
+{% elif hasil is not none %}
+    <p>Data tidak ditemukan</p>
+{% endif %}
+
+<br>
+<a href="/">kembali</a>
