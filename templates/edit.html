@@ -1,1 +1,15 @@
+<h1>Edit Nilai</h1>
 
+<p>Nama: {{ mhs.nama }}</p>
+
+{% if error %}
+<p style="color:red">{{ error }}</p>
+{% endif %}
+
+<form method="POST">
+    <input type="number" name="nilai" value="{{ mhs.nilai }}" required>
+    <button type="submit">Simpan</button>
+</form>
+
+<br>
+<a href="/">Kembali</a>
